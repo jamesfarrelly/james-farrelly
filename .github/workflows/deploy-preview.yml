@@ -2,6 +2,9 @@ name: Deploy to PREVIEW
 on: pull_request
 jobs:
   build_and_preview:
+    permissions:
+      checks: 'write'
+      pull-requests: 'write'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
