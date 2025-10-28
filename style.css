@@ -1,0 +1,210 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #005a9c;  /* A professional blue */
+    --secondary-color: #003366; /* A darker blue */
+    --light-gray: #f4f4f4;
+    --medium-gray: #ddd;
+    --dark-text: #333;
+    --light-text: #ffffff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--light-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0.5rem 1.5rem;
+}
+
+nav a {
+    color: var(--light-text);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--medium-gray);
+    text-decoration: none;
+}
+
+/* --- Section Specific Styles --- */
+
+/* Professional Experience */
+.job-entry {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.job-entry h3 {
+    margin-top: 0;
+}
+
+/* Set Construction Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+}
+
+.gallery-item p {
+    padding: 10px;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Hockey Section */
+.hockey-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.team-photo {
+    flex: 1 1 400px; /* Flex-basis of 400px */
+    min-width: 300px;
+}
+
+.hockey-content p {
+    flex: 1 1 300px; /* Flex-basis of 300px */
+}
+
+/* Video Library */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-item {
+    text-align: center;
+}
+
+.video-item iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Modern way to handle responsive video */
+    border-radius: var(--border-radius);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: var(--light-text);
+    margin-top: 30px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .hockey-content {
+        flex-direction: column;
+    }
+}
