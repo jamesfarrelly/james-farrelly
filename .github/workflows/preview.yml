@@ -1,0 +1,38 @@
+# .github/workflows/preview.yml
+
+name: Deploy to Firebase Preview
+
+on:
+  pull_request:
+    # Only run for PRs targeting your main branch
+    branches:
+      - main
+    # Run when a PR is opened, re-opened, or new commits are pushed
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build_and_preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a current LTS version
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build site
+        run: npm run build
+        
+      - name: Deploy to Firebase Preview Channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          # This token is required to post a comment on the PR
+          repoToken: '${{ secrets.REPOTOKEN }}' 
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT  }}'
+          projectId: 'james-farrelly' # <-- Change this
