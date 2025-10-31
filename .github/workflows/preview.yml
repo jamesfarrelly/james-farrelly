@@ -34,5 +34,5 @@ jobs:
         with:
           # This token is required to post a comment on the PR
           repoToken: '${{ secrets.REPOTOKEN }}' 
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT  }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JAMES_FARRELLY }}'
           projectId: 'james-farrelly' # <-- Change this
