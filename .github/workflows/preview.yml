@@ -10,9 +10,19 @@ on:
     # Run when a PR is opened, re-opened, or new commits are pushed
     types: [opened, synchronize, reopened]
 
+permissions: # <--- THIS IS THE CRITICAL LOCATION
+  contents: read
+  pull-requests: write
+  checks: write
+
 jobs:
   build_and_preview:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      deployments: write
+      checks: write
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
@@ -33,6 +43,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           # This token is required to post a comment on the PR
-          repoToken: '${{ secrets.REPOTOKEN }}' 
+          repoToken: '${{ secrets.GITHUB_TOKEN }}' 
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JAMES_FARRELLY }}'
           projectId: 'james-farrelly' # <-- Change this
