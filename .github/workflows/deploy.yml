@@ -29,5 +29,5 @@ jobs:
         with:
           repoToken: '${{ secrets.REPOTOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JAMES_FARRELLY }}'
-          projectId: 'james-farrelly'
+          projectId: 'james-farrelly' 
           channelId: live
