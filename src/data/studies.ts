@@ -23,18 +23,7 @@ export const studies = [
       "ConflictResolution",
     ],
   },
-  {
-    title: "Computer Science Studies - no degree",
-    institution: "Drexel University",
-    description:
-      "Foundational software engineering, algorithms, and data structures. The program was defined by Drexel's renowned co-op, which integrated 18 months of full-time, practical industry experience alongside traditional academics.",
-    tags: [
-      "Algorithm Design",
-      "Computer Engineering",
-      "Data Structures",
-      "Optimization",
-    ],
-  },
+
 ];
 
 export type StudyItem = (typeof studies)[number];
