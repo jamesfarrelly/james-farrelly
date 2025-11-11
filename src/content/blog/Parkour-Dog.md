@@ -35,10 +35,7 @@ So, when the model generates the dog landing on its front paws, it suddenly has 
 
 ---
 
-<video controls width="100%">
-  <source src="/videos/Golden_Retriever_Parkour_Video_Generated.mp4" type="video/mp4">
-  Sorry, your browser doesn't support embedded videos, but you can <a href="https://gemini.google.com/share/28e25a5b91ca">watch it here</a>.
-</video>
+[Watch the video on YouTube](https://youtu.be/IUMFIRcJam0)
 
 ---
 
