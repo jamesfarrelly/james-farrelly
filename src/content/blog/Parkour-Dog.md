@@ -35,7 +35,15 @@ So, when the model generates the dog landing on its front paws, it suddenly has 
 
 ---
 
-[Watch the video on YouTube](https://youtu.be/IUMFIRcJam0)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        src="https://www.youtube.com/embed/IUMFIRcJam0" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+</div>
 
 ---
 
